@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Niyera | A Space to Pause. Reflect. Realign.</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+
+
+:root{
+  --teal:#2f6f6b;
+  --teal-dark:#1f3d3b;
+  --sand:#f7f4ef;
+  --clay:#b48a6d;
+  --text:#1f2f2e;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:var(--sand);
+  color:var(--text);
+  line-height:1.7;
+  font-size:18px;
+  scroll-behavior:smooth;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(6px);
+  z-index:1000;
+}
+
+.logo-group{
+text-decoration: none;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-group img{
+  width:48px;
+  height:48px;
+  border-radius:8px;
+}
+
+.logo-group strong{
+  color:#fff;
+  font-size:22px;
+}
+
+.menu-links{
+  display:flex;
+  gap:32px;
+}
+
+.menu-links a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.menu-links a:hover{
+  color:var(--clay);
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:100vh;
+  background:url('Header.png') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 60px;
+}
+
+.hero-content{
+  max-width:600px;
+  color:#fff;
+  text-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content h1{
+  font-family:'Playfair Display', serif;
+  font-size:56px;
+  line-height:1.2;
+  margin-bottom:24px;
+}
+
+.hero-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+.hero-row p{
+  font-size:20px;
+  margin:0;
+}
+
+.hero-btn{
+  padding:14px 36px;
+  background:var(--clay);
+  color:#fff;
+  text-decoration:none;
+  border-radius:4px;
+}
+
+.hero-btn:hover{
+  background:#9e6f54;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:160px;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    var(--sand)
+  );
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:120px 32px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+/* ================= ABOUT ================= */
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+  background: linear-gradient(
+    180deg,
+    #f7f4ef 0%,
+    #efe9e1 100%
+  );
+  text-align: center;
+}
+
+.about-intro {
+  max-width: 900px;
+  margin: -40px auto 80px;
+  font-size: 20px;
+  color: #4a5a59;
+  line-height: 1.8;
+}
+
+/* Card grid — SAME LOGIC AS OFFERINGS */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Cards */
+.about-card {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(47, 111, 107, 0.08) 0%,
+      rgba(255, 255, 255, 0.96) 65%
+    );
+  padding: 48px 40px;
+  border-radius: 22px;
+  border-top: 6px solid var(--teal);
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  /* ❌ REMOVE manual animation blocking */
+  opacity: 1;
+  transform: none;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* Headings */
+.about-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--teal);
+  margin-bottom: 28px;
+}
+
+/* Icon list */
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.icon-list li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 14px;
+  align-items: start;
+
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3f4f4e;
+}
+
+.icon-list span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+  .about-card {
+    text-align: center;
+  }
+}
+
+/* ================= COACHING LOOK ================= */
+.coaching-look{
+  background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80')
+    center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* ================= OFFERINGS ================= */
+.offerings{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.offer{
+  background:#fff;
+  padding:40px;
+  border-top:6px solid var(--clay);
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.offer h3{
+  font-family:'Playfair Display', serif;
+  margin-bottom:16px;
+}
+
+/* ================= CTA ================= */
+.cta{
+  background:var(--teal-dark);
+  color:#fff;
+  text-align:center;
+}
+
+form{
+  max-width:520px;
+  margin:40px auto 0;
+}
+
+input, textarea{
+  width:100%;
+  padding:16px;
+  margin-bottom:18px;
+  border:none;
+  border-radius:4px;
+}
+
+button{
+  background:var(--clay);
+  color:#fff;
+  padding:16px;
+  border:none;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#121e1d;
+  color:#aaa;
+  text-align:center;
+  padding:32px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .hero-content h1{font-size:42px;}
+  .hero-row{flex-direction:column; align-items:flex-start;}
+  .about-cards{flex-direction:column;}
+  .offerings{grid-template-columns:1fr;}
+}
+
+/* ===============================
+   COACHING SECTION (CLEAN)
+================================ */
+.coaching-section{
+  background: linear-gradient(
+    180deg,
+    rgba(47, 111, 107, 0.12),
+    rgba(247, 244, 239, 1)
+  );
+  padding:120px 32px;
+  text-align:center;
+}
+
+.coaching-section h2{
+  font-family:'Playfair Display', serif;
+  font-size:44px;
+  color:var(--teal-dark);
+  margin-bottom:60px;
+}
+
+/* Image placeholder */
+.coaching-image-wrap{
+  width:70%;
+  max-width:900px;
+  height:50%; 
+  margin:0 auto;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.18);
+  background:#eae5dc;
+}
+
+.coaching-image-wrap img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .coaching-image-wrap{
+    width:100%;
+	   height:50%; 
+  }
+
+  .coaching-section h2{
+    font-size:36px;
+  }
+}
+
+/* ===============================
+   NIYERA CLARITY NOTE
+================================ */
+
+.niyera-clarity-note{
+  max-width:900px;
+  margin:100px auto 0;
+  text-align:center;
+  padding:0 20px;
+}
+
+.niyera-clarity-main{
+  font-family:'Inter', sans-serif;
+  font-size:18px;
+  line-height:1.8;
+  color:#3f4a47;
+  margin-bottom:48px;
+}
+
+/* ICF Highlight Box */
+.niyera-icf-note{
+  background:rgba(47,111,107,0.08);
+  padding:36px 40px;
+  border-radius:20px;
+  border:1px solid rgba(47,111,107,0.18);
+}
+
+.niyera-icf-note span{
+  display:inline-block;
+  font-size:12px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--teal);
+  margin-bottom:14px;
+}
+
+.niyera-icf-note p{
+  font-size:15.5px;
+  line-height:1.7;
+  color:#2f2f2f;
+}
+/* ===============================
+   NIYERA COACHING STANDARDS
+================================ */
+
+.niyera-standards{
+  margin-top:60px;
+  text-align:center;
+}
+
+.standards-intro{
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  color:var(--teal-dark);
+  margin-bottom:28px;
+}
+
+/* Grid */
+.standards-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px 40px;
+  max-width:760px;
+  margin:0 auto;
+}
+
+/* Item */
+.standard-item{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  text-align:left;
+}
+
+.standard-item p{
+  font-size:15.5px;
+  line-height:1.6;
+  color:#3a3a3a;
+}
+
+/* Soft icon dot */
+.standard-item .dot{
+  width:10px;
+  height:10px;
+  margin-top:8px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--teal), #7fbdb6);
+  flex-shrink:0;
+}
+
+/* Mobile */
+@media(max-width:700px){
+  .standards-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===============================
+   COACHING TITLE – MODERN LOOK
+================================ */
+
+.coaching-eyebrow{
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--clay);
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.coaching-title{
+  font-family:'Playfair Display', serif;
+  font-size:42px;
+  font-weight:500; /* key change */
+  line-height:1.25;
+  color:var(--teal-dark);
+  margin-bottom:60px;
+}
+
+/* Slight emphasis on brand name */
+.coaching-title br + text,
+.coaching-title span{
+  font-weight:600;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .coaching-title{
+    font-size:34px;
+  }
+}
+/* ===============================
+   OFFERINGS SECTION
+================================ */
+
+.offerings-section {
+  background: #f3f6f4; /* soft neutral */
+  padding: 140px 32px;
+}
+
+/* Shared section heading style */
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--teal);
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+
+/* Cards layout */
+.offerings-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card base */
+.offering-card {
+  position: relative;
+  padding: 46px 38px;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+/* Subtle abstract background inside card */
+.offering-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(47,111,107,0.12),
+      transparent 55%
+    );
+  z-index: 0;
+}
+
+/* Variant gradients */
+.card-two::before {
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(180,138,109,0.14),
+      transparent 60%
+    );
+}
+
+.card-three::before {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(47,111,107,0.10),
+      transparent 65%
+    );
+}
+
+/* Content above background */
+.offering-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+.offering-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+
+.offering-tagline {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clay);
+  margin-bottom: 20px;
+}
+
+.offering-desc {
+  font-size: 16px;
+  color: #3f4f4e;
+  margin-bottom: 26px;
+  line-height: 1.6;
+}
+
+/* List */
+.offering-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offering-list li {
+  font-size: 16px;
+  color: #2f3f3e;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .offerings-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .offerings-title {
+    font-size: 34px;
+    margin-bottom: 60px;
+  }
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  background: linear-gradient(
+    180deg,
+    #1f3d3b,
+    #2f6f6b
+  );
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact-subtext {
+  font-size: 20px;
+  max-width: 600px;
+  margin: -40px auto 40px;
+  color: #e6f2f1;
+}
+
+.contact-subtext strong {
+  color: var(--clay);
+  font-weight: 600;
+}
+
+.contact-details {
+  margin-bottom: 48px;
+  font-size: 18px;
+  color: #eaf4f3;
+}
+
+.contact-details p {
+  margin: 8px 0;
+}
+
+
+.contact-details{
+  text-align:center;
+}
+
+.contact-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:inherit;
+  font-size:18px;
+}
+
+.contact-link:hover{
+  color:var(--teal);
+}
+
+.contact-link .icon{
+  font-size:22px;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* Mobile slide menu */
+.mobile-menu{
+  position:fixed;
+  top:72px;
+  right:0;
+  width:100%;
+  background:rgba(31,61,59,0.97);
+  backdrop-filter:blur(6px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+  padding:40px 0;
+  transform:translateY(-120%);
+  transition:transform 0.4s ease;
+  z-index:999;
+}
+
+.mobile-menu a{
+  color:#fff;
+  font-size:18px;
+  text-decoration:none;
+}
+
+.mobile-menu a:hover{
+  color:var(--clay);
+}
+
+.mobile-menu.active{
+  transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px){
+  .menu-links{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo-group">
+   <a href="#home" class="logo-group"> <img src="NIYERA_LOGO.png" alt="Niyera Logo">
+    <strong>Niyera</strong></a>
+  </div>
+  <div class="menu-links">
+    <a href="#about">About</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#offerings">Offerings</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+
+  <!-- Mobile Toggle -->
+  <div class="menu-toggle" id="menuToggle">
+    ☰
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#coaching">Coaching</a>
+  <a href="#offerings">Offerings</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-content" data-aos="fade-right">
+    <h1>Something in your life is<br>asking for your attention.</h1>
+    <div class="hero-row">
+      <p>A space to Pause | Reflect | Realign.</p>
+      <a href="#about" class="hero-btn">Find out what</a>
+    </div>
+  </div>
+  <div class="hero-divider">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path d="M0,40 C240,80 480,0 720,20 960,40 1200,10 1440,30 L1440,0 L0,0 Z"
+          fill="#f7f4ef"></path>
+  </svg>
+</div>
+</header>
+
+<!-- ABOUT -->
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="container">
+
+    <h2 class="section-heading" data-aos="fade-up">
+      Discover, What You Need Right Now !
+    </h2>
+
+    <p class="about-intro" data-aos="fade-up" data-aos-delay="100">
+      We all have goals we want to reach, challenges we’re striving to overcome,
+      ideas that need a roadmap — and moments when we feel stuck.
+      <br><br>
+      Partnering with a professional coach can unlock your potential and help you
+      move forward with clarity and confidence.
+    </p>
+
+    <div class="about-cards">
+
+      <!-- CARD 1 -->
+      <div class="about-card" data-aos="fade-up" data-aos-easing="ease-out-cubic">
+        <h3>Who This Is For ?</h3>
+        <ul class="icon-list">
+          <li><span>🌱</span>You’re at a crossroads — career, life, or identity</li>
+          <li><span>🌿</span>You’ve outgrown your current version</li>
+          <li><span>🪶</span>You’re successful, but something feels off</li>
+          <li><span>🧭</span>You want clarity before your next move</li>
+        </ul>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>What We’ll Explore ?</h3>
+        <ul class="icon-list">
+          <li><span>💭</span>What feels unclear or heavy</li>
+          <li><span>🔁</span>What you’re moving away from — and towards</li>
+          <li><span>🤝</span>The kind of support that would truly help</li>
+          <li><span>✨</span>Whether Niyera is the right space for you</li>
+        </ul>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>What Happens Next ?</h3>
+        <ul class="icon-list">
+          <li><span>🗣️</span>You share what’s on your mind</li>
+          <li><span>🤍</span>A quiet, focused conversation</li>
+          <li><span>🌤️</span>You leave with clarity — with or without next steps</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- COACHING -->
+<section id="coaching" class="coaching-section">
+  <div class="container" data-aos="fade-up">
+
+  <p class="coaching-eyebrow">The Experience</p>
+<h2 class="coaching-title">
+  What Coaching with Niyera<br>
+  Looks Like !
+</h2>
+
+
+    <div class="coaching-image-wrap" data-aos="fade-up" data-aos-delay="120">
+      <!-- Replace src later with your real image -->
+      <img src="coaching.png" alt="Coaching at Niyera">
+    </div>
+
+  </div>
+  
+  <div class="niyera-clarity-note" data-aos="fade-up">
+  <p class="niyera-clarity-main">
+    There’s no one-size-fits-all approach to growth or clarity.
+    At <strong>Niyera</strong>, coaching is offered in thoughtfully designed formats —
+    so you can choose the level of support that feels right for you.
+  </p>
+
+  <div class="niyera-icf-note">
+    <span>ICF-Aligned Coaching</span>
+    <p>
+      Coaching at Niyera is offered by an
+      <strong>ICF Associate Certified Coach (ACC)</strong>
+      and follows the ethical standards and core competencies
+      of the <strong>International Coaching Federation (ICF)</strong>.
+    </p>
+  
+<div class="niyera-standards" data-aos="fade-up" data-aos-delay="120">
+  <p class="standards-intro">This means:</p>
+
+  <div class="standards-grid">
+    <div class="standard-item">
+      <span class="dot"></span>
+      <p>Confidentiality and psychological safety</p>
+    </div>
+
+    <div class="standard-item">
+      <span class="dot"></span>
+      <p>Clear coaching boundaries</p>
+    </div>
+
+    <div class="standard-item">
+      <span class="dot"></span>
+      <p>A structured, professional coaching process</p>
+    </div>
+
+    <div class="standard-item">
+      <span class="dot"></span>
+      <p>Focus on your autonomy and self-directed growth</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- OFFERINGS -->
+<!-- OFFERINGS SECTION -->
+<section id="offerings" class="offerings-section">
+  <div class="container">
+
+    <h2 class="section-heading" data-aos="fade-up">
+  What We Can Offer You !
+</h2>
+
+
+    <div class="offerings-cards">
+
+      <!-- CARD 1 -->
+      <div class="offering-card card-one" data-aos="fade-up">
+        <h3>Discovery Conversation</h3>
+        <p class="offering-tagline">
+          Complimentary · Exploratory
+        </p>
+
+        <p class="offering-desc">
+          Best if you’re exploring coaching for the first time or unsure what you need.
+        </p>
+
+        <ul class="offering-list">
+          <li>🕊️ Space to share what’s on your mind</li>
+          <li>💬 Understand how coaching can support you</li>
+          <li>🌿 No obligation to continue</li>
+        </ul>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="offering-card card-two" data-aos="fade-up" data-aos-delay="100">
+        <h3>Clarity Coaching</h3>
+        <p class="offering-tagline">
+          Short-Term Engagement
+        </p>
+
+        <p class="offering-desc">
+          Best if you’re facing a decision, transition, or period of uncertainty.
+        </p>
+
+        <ul class="offering-list">
+          <li>🧭 Structured one-to-one sessions</li>
+          <li>🔍 Focus on awareness, perspective, and choice</li>
+          <li>✨ Designed to help you move forward with clarity</li>
+        </ul>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="offering-card card-three" data-aos="fade-up" data-aos-delay="200">
+        <h3>Ongoing Coaching Partnership</h3>
+        <p class="offering-tagline">
+          Long-Term Growth
+        </p>
+
+        <p class="offering-desc">
+          Best if you’re committed to deeper growth and sustained change.
+        </p>
+
+        <ul class="offering-list">
+          <li>🤍 Regular coaching conversations</li>
+          <li>🌱 Support through evolving goals and challenges</li>
+          <li>🧠 A steady thinking partner in life or leadership</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <h2 class="section-heading" data-aos="fade-up">
+     Ready to Begin?
+    </h2>
+
+    <p class="contact-subtext" data-aos="fade-up" data-aos-delay="100">
+      Connect with us for a <strong>FREE</strong> discovery session.
+    </p>
+
+    <p>
+    <a href="https://wa.me/919412366166" target="_blank" class="contact-link">
+      <span class="icon">💬</span>
+      <strong>+91 9412366166 (WhatsApp only)</strong>
+    </a>
+  </p>
+
+  <p>
+   <a href="mailto:helloNiyera@gmail.com"
+   onclick="window.location.href='mailto:helloNiyera@gmail.com';"
+   class="contact-link">
+      <span class="icon">✉️</span>
+      <strong>helloNiyera@gmail.com</strong>
+    </a>
+  </p>
+    
+  </div>
+</section>
+
+
+<footer>
+  © Niyera • A Space to Pause | Reflect | Realign
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+      offset: 120
+    });
+    AOS.refresh();
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    once: true,
+    offset: 120,
+    easing: 'ease-out-cubic'
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+  </script>
+
+</body>
+</html>
