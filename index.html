@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Niyera | Pause. Reflect. Realign.</title>
+<title>Niyera | Find Your Next Move.</title>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -88,7 +88,7 @@ text-decoration: none;
 /* ================= HERO ================= */
 .hero{
   min-height:100vh;
-  background:url('Header.png') center/cover no-repeat;
+  background:url('hero-corp.png') center/cover no-repeat;
   display:flex;
   align-items:center;
   padding:0 60px;
@@ -120,7 +120,9 @@ text-decoration: none;
 }
 
 .hero-btn{
+display:inline-block; 
   padding:14px 36px;
+  align:right;
   background:var(--clay);
   color:#fff;
   text-decoration:none;
@@ -357,7 +359,7 @@ footer{
 .coaching-image-wrap{
   width:70%;
   max-width:900px;
-  height:50%;
+  height:50%; 
   margin:0 auto;
   border-radius:20px;
   overflow:hidden;
@@ -376,7 +378,7 @@ footer{
 @media(max-width:900px){
   .coaching-image-wrap{
     width:100%;
-  height:50%;
+	   height:50%; 
   }
 
   .coaching-section h2{
@@ -463,7 +465,14 @@ footer{
   line-height:1.6;
   color:#3a3a3a;
 }
-
+.dot{
+  width:10px;
+  height:10px;
+  margin-top:8px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--teal), #7fbdb6);
+  flex-shrink:0;
+}
 /* Soft icon dot */
 .standard-item .dot{
   width:10px;
@@ -621,7 +630,14 @@ footer{
   padding: 0;
   margin: 0;
 }
-
+.standard-item .dot{
+  width:10px;
+  height:10px;
+  margin-top:8px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--teal), #7fbdb6);
+  flex-shrink:0;
+}
 .offering-list li {
   font-size: 16px;
   color: #2f3f3e;
@@ -764,6 +780,7 @@ footer{
     <strong>Niyera</strong></a>
   </div>
   <div class="menu-links">
+  <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#coaching">Coaching</a>
     <a href="#offerings">Offerings</a>
@@ -779,6 +796,7 @@ footer{
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
+<a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#coaching">Coaching</a>
   <a href="#offerings">Offerings</a>
@@ -789,12 +807,20 @@ footer{
 <!-- HERO -->
 <header class="hero" id="home">
   <div class="hero-content" data-aos="fade-right">
-    <h1>Something in your life is<br>asking for your attention.</h1>
+    <h1>For Professionals Seeking More Than Just Success.</h1>
     <div class="hero-row">
-      <p>Pause | Reflect | Realign</p>
-      <a href="#about" class="hero-btn">Find out what</a>
-    </div>
+      <p>When your next move feels unclear and <br>
+ Standing still no longer feels right.</p><br><br>
+
+      
+    
+	<br>
+	<br>
+	</div>
+	<a href="https://forms.gle/A4RLwzLEW881SQkh8 " class="hero-btn" target="new">Take 5-Minute Self-Check Assessment here -></a>
+  
   </div>
+  
   <div class="hero-divider">
   <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
     <path d="M0,40 C240,80 480,0 720,20 960,40 1200,10 1440,30 L1440,0 L0,0 Z"
@@ -813,8 +839,13 @@ footer{
     </h2>
 
     <p class="about-intro" data-aos="fade-up" data-aos-delay="100">
-      We all have goals we want to reach, challenges we’re striving to overcome,
-      ideas that need a roadmap, and moments when we feel stuck.
+You’ve built experience! <br>
+You’ve earned stability! <br>
+You’ve proven your capability<br>
+And yet, something feels misaligned.<br>
+Not because you’re failing.<br>
+But because you may be at a career transition your earlier self wasn’t prepared for.
+
       <br><br>
       Partnering with a professional coach can unlock your potential and help you
       move forward with clarity and confidence.
@@ -826,10 +857,12 @@ footer{
       <div class="about-card" data-aos="fade-up" data-aos-easing="ease-out-cubic">
         <h3>Who This Is For ?</h3>
         <ul class="icon-list">
-          <li><span>🌱</span>You’re at a crossroads : career, life, or identity</li>
-          <li><span>🌿</span>You’ve outgrown your current version</li>
-          <li><span>🪶</span>You’re successful, but something feels off</li>
-          <li><span>🧭</span>You want clarity before your next move</li>
+		Mid-career professionals (7–15 years experience) who are:
+          <li><span class="dot"></span>Considering a career pivot but unsure of the risk</li>
+          <li><span class="dot"></span>Recently promoted and navigating a leadership identity shift</li>
+          <li><span class="dot"></span>Feeling stagnant despite strong performance</li>
+          <li><span class="dot"></span>Successful externally but internally unsettled</li>
+		  <li><span class="dot"></span>Torn between stability and meaningful growth</li>
         </ul>
       </div>
 
@@ -837,21 +870,29 @@ footer{
       <div class="about-card" data-aos="fade-up" data-aos-delay="100">
         <h3>What We’ll Explore ?</h3>
         <ul class="icon-list">
-          <li><span>💭</span>What feels unclear or heavy</li>
-          <li><span>🔁</span>What you’re moving away from and towards</li>
-          <li><span>🤝</span>The kind of support that would truly help</li>
-          <li><span>✨</span>Whether Niyera is the right space for you</li>
+          <li><span class="dot"></span>The real transition you are navigating</li>
+          <li><span class="dot"></span>The fear beneath the surface decision</li>
+          <li><span class="dot"></span>Whether your conflict is about growth, identity, or alignment</li>
+          <li><span class="dot"></span>What staying vs moving forward truly means for you</li>
+		  <li><span class="dot"></span>Your next 90-day strategic direction</li>
+		  You leave with perspective - not pressure
         </ul>
       </div>
 
       <!-- CARD 3 -->
       <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-        <h3>What Happens Next ?</h3>
+        <h3>Session structure
+</h3>
         <ul class="icon-list">
-          <li><span>🗣️</span>You share what’s on your mind</li>
-          <li><span>🤍</span>A quiet, focused conversation</li>
-          <li><span>🌤️</span>You leave with clarity, with or without next steps</li>
-        </ul>
+		You bring the situation.
+We structure the thinking.
+This is a 40-minutes outcome-oriented conversation where:
+          <li><span class="dot"></span>Mental noise is separated from real risk</li>
+          <li><span class="dot"></span>Assumptions are challenged</li>
+          <li><span class="dot"></span>Options are evaluated strategically</li>
+		  <li><span class="dot"></span>A clear next step is defined</li>
+		  </ul> <br>
+		  You leave with clarity and a direction you can act on.
       </div>
 
     </div>
@@ -879,7 +920,7 @@ footer{
     </div>
 
   </div>
- 
+  
   <div class="niyera-clarity-note" data-aos="fade-up">
   <p class="niyera-clarity-main">
     There’s no one-size-fits-all approach to growth or clarity.
@@ -891,11 +932,11 @@ footer{
     <span>ICF-Aligned Coaching</span>
     <p>
       Coaching at Niyera is offered by an
-      <strong>ICF Associate Certified Coach (ACC)</strong>
+      <strong>ICF Associate Certified Coach (ACC) with decades of corporate leadership experience.</strong>
       and follows the ethical standards and core competencies
       of the <strong>International Coaching Federation (ICF)</strong>.
     </p>
- 
+  
 <div class="niyera-standards" data-aos="fade-up" data-aos-delay="120">
   <p class="standards-intro">This means:</p>
 
@@ -941,55 +982,67 @@ footer{
 
       <!-- CARD 1 -->
       <div class="offering-card card-one" data-aos="fade-up">
-        <h3>Discovery Conversation</h3>
+        <h3>Career Crossroads Diagnostic </h3>
         <p class="offering-tagline">
-          Complimentary · Exploratory
+         (Recommended First Step)
         </p>
 
         <p class="offering-desc">
-          Best if you’re exploring coaching for the first time or unsure what you need.
+          A structured self-assessment to identify your current transition zone and clarify where your internal conflict lies.
         </p>
 
         <ul class="offering-list">
-          <li>🕊️ Space to share what’s on your mind</li>
-          <li>💬 Understand how coaching can support you</li>
-          <li>🌿 No obligation to continue</li>
+          <a href="https://forms.gle/A4RLwzLEW881SQkh8" target="new" >Take 5-Minute Self-Check Assessment</a>
+         
         </ul>
       </div>
 
       <!-- CARD 2 -->
       <div class="offering-card card-two" data-aos="fade-up" data-aos-delay="100">
-        <h3>Clarity Coaching</h3>
+        <h3>Clarity Strategy Session </h3>
         <p class="offering-tagline">
-          Short-Term Engagement
+         (40 Minutes)
         </p>
 
         <p class="offering-desc">
-          Best if you’re facing a decision, transition, or period of uncertainty.
+          Best for professionals facing:
         </p>
 
-        <ul class="offering-list">
-          <li>🧭 Structured one-to-one sessions</li>
-          <li>🔍 Focus on awareness, perspective, and choice</li>
-          <li>✨ Designed to help you move forward with clarity</li>
+        <ul class="icon-list">
+          <li ><span class="dot"></span>Promotion or leadership transition</li>
+          <li><span class="dot"></span> Career stagnation</li>
+          <li><span class="dot"></span> Pivot consideration</li>
+		  <li><span class="dot"></span> Stability vs growth dilemma</li>
+        </ul><br>
+		 <p class="offering-desc">
+          <b>Outcome:</b>
+        </p>
+
+        <ul class="icon-list">
+          <li><span class="dot"></span> Defined transition type + 90-day direction roadmap.</li>
+          <li><span class="dot"></span><b>Investment: ₹499</b></li>
         </ul>
+		
+
+
+
       </div>
 
       <!-- CARD 3 -->
       <div class="offering-card card-three" data-aos="fade-up" data-aos-delay="200">
-        <h3>Ongoing Coaching Partnership</h3>
+        <h3>Extended Coaching Partnership</h3>
         <p class="offering-tagline">
           Long-Term Growth
         </p>
 
         <p class="offering-desc">
-          Best if you’re committed to deeper growth and sustained change.
+          For professionals committed to deeper leadership evolution and sustained growth.
+			Structured engagements designed around your specific transition phase.
+
         </p>
 
         <ul class="offering-list">
-          <li>🤍 Regular coaching conversations</li>
-          <li>🌱 Support through evolving goals and challenges</li>
-          <li>🧠 A steady thinking partner in life or leadership</li>
+          
         </ul>
       </div>
 
@@ -1004,10 +1057,10 @@ footer{
   <div class="container">
 
     <h2 class="section-heading" data-aos="fade-up">
-    <strong>  Ready to Begin? </strong>
+    <strong> Clarity before next move changes everything </strong>
     </h2>
 
-   
+    
 
     <!-- Calendly CTA -->
     <p data-aos="fade-up" data-aos-delay="200">
@@ -1015,7 +1068,7 @@ footer{
     target="_blank"
    class="hero-btn">
   <span class="icon">📅</span>
-  <strong>Book your Discovery Session </strong>
+  <strong>Book a Clarity Strategy Session</strong>
 </a>
 </a>
 </p>
@@ -1044,7 +1097,7 @@ footer{
 
 
 <footer>
-  © Niyera • Pause | Reflect | Realign
+  © Niyera | Find Your Next Move
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -1087,7 +1140,7 @@ footer{
     });
   });
   </script>
- 
+  
   <!-- Calendly script (add once before </body>) -->
 <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 
