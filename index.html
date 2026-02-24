@@ -330,6 +330,40 @@ footer{
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
   .hero-content h1{font-size:42px;}
+  .hero{
+  min-height: 100vh;
+  padding: 120px 24px 60px;  /* pushes below fixed nav */
+  align-items: flex-start;   /* start content from top */
+  background-position: center top;
+}
+
+.hero-content{
+  max-width: 100%;
+}
+
+.hero-content h1{
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.hero-row{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.hero{
+  position: relative;
+}
+.hero-row p{
+  font-size: 18px;
+}
+
+.hero-btn{
+  display: inline-block;
+  margin-top: 24px;
+  width: 100%;            /* full width button */
+  text-align: center;
+}
   .hero-row{flex-direction:column; align-items:flex-start;}
   .about-cards{flex-direction:column;}
   .offerings{grid-template-columns:1fr;}
@@ -814,11 +848,9 @@ footer{
 
       
     
-	<br>
-	<br>
-	</div>
+		
 	<a href="https://forms.gle/A4RLwzLEW881SQkh8 " class="hero-btn" target="new">Take 5-Minute Self-Check Assessment here -></a>
-  
+  </div>
   </div>
   
   <div class="hero-divider">
